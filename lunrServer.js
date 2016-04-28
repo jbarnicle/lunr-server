@@ -20,7 +20,7 @@ function LunrServer(corpora) {
 
 LunrServer.prototype.addCorpus = function (corpus) {
     
-    this.corpora[corpus.key] = corpus;
+    this.corpora[corpus.name] = corpus;
 
 }
 
