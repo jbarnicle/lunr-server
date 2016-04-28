@@ -3,30 +3,45 @@
 var request = require('request');
 var lunr = require('lunr');
 
-function Corpora(name, baseurl, indexPath, remote) {
+module.exports = class Corpus {
 	
-	this.name = name;
-	this.baseurl = baseurl;
-	this.indexPath = indexPath;
-	this.remote = remote;
-	this.key = name.toLowerCase().split(' ').join('-');
-	this.lastUpdate = null;
+	constructor(corporaDef) {
+
+      	this.name = corporaDef.name;
+      	this.baseurl = corporaDef.baseurl;
+      	this.indexPath = corporaDef.indexPath;
+      	this.remote = corporaDef.remote;
+      	this.refreshInterval = corporaDef.refreshInterval * 60 * 60 * 1000;
+      	this.lastRefresh = null;
+
+	}
+
+	load() {
+
+		var that = this;
+		fetchRemoteCorpora(this.baseurl + this.indexPath).then(
+			function(data) { 
+				parseCorpus(that, data)
+				if (that.lastRefresh == null) {
+					that.lastRefresh = Date.now();
+					setInterval(function() {
+						that.load()
+					}, that.refreshInterval);
+				}
+			});
+	}
 }
 
-Corpora.prototype.load = function() {
-
-	var that = this;
-	request(this.baseurl + this.indexPath, function (error, response, body) {
-	    if (!error && response.statusCode == 200) {
-	    	parseCorpus(that, body).then(function(result) {
-	    		that.lastUpdate =  Date.now();
-			}, function(err) {
-				console.log(err); // Error: "It broke"
-			});
-	    } else {
-	    	console.log(error);
-	    }
-	});3
+function fetchRemoteCorpora(path) {
+	return new Promise(function(resolve, reject) {
+		request(path, function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				resolve(body);
+	    	} else {
+	    		reject(error);
+	    	}
+		})
+	})
 }
 
 function parseCorpus(corpus, searchJSON) {
@@ -46,10 +61,8 @@ function parseCorpus(corpus, searchJSON) {
 }
 
 function adjustCorpusSpecProperties(corpusSpec) {
-  if (corpusSpec.url_to_doc) {
-    corpusSpec.urlToDoc = corpusSpec.url_to_doc;
-    delete corpusSpec.url_to_doc;
-  }
+	if (corpusSpec.url_to_doc) {
+		corpusSpec.urlToDoc = corpusSpec.url_to_doc;
+		delete corpusSpec.url_to_doc;
+	}
 }
-
-module.exports = Corpora;

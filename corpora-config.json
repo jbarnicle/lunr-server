@@ -4,79 +4,79 @@
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/accessibility/search-index.json",
       "remote" : true,
-      "key" : "accessibility"
+      "refreshInterval" : 2
     },
     { "name": "Micropurchase API",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/micropurchase-api-docs/search-index.json",
       "remote" : true,
-      "key" : "micropurchase-api"
+      "refreshInterval" : 2
     },
     { "name": "Plain Language Tutorial",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/plain-language-tutorial/search-index.json",
       "remote" : true,
-      "key" : "plain-language-tutorial"
+      "refreshInterval" : 2
     },
     { "name": "Writing Lab Guide",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/writing-lab-guide/search-index.json",
       "remote" : true,
-      "key" : "writing-lab-guide"
+      "refreshInterval" : 2
     },
     { "name": "Intake",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/intake/search-index.json",
       "remote" : true,
-      "key" : "intake"
+      "refreshInterval" : 2
     },
     { "name": "Unit Testing Node",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/unit-testing-node/search-index.json",
       "remote" : true,
-      "key" : "unit-testing-node"
+      "refreshInterval" : 2
     },
     { "name": "Content Guide",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/content-guide/search-index.json",
       "remote" : true,
-      "key" : "content-guide"
+      "refreshInterval" : 2
     },
     { "name": "Before You Ship",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/before-you-ship/search-index.json",
       "remote" : true,
-      "key" : "before-you-ship"
+      "refreshInterval" : 2
     },
     { "name": "Front End",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/frontend/search-index.json",
       "remote" : true,
-      "key" : "frontend"
+      "refreshInterval" : 2
     },
     { "name": "18F Plain Language Tutorial",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/18F-plain-language-tutorial/search-index.json",
       "remote" : true,
-      "key" : "18F-plain-language-tutorial"
+      "refreshInterval" : 2
     },
     { "name": "Product Guide",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/product-guide/search-index.json",
       "remote" : true,
-      "key" : "product-guide"
+      "refreshInterval" : 2
     },
     { "name": "Guides Template",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/guides-template/search-index.json",
       "remote" : true,
-      "key" : "guides-template"
+      "refreshInterval" : 2
     },
     { "name": "Team Browser",
       "baseurl": "https://pages.18f.gov",
       "indexPath": "/team-browser/search-index.json",
       "remote" : true,
-      "key" : "team-browser"
+      "refreshInterval" : 2
     }    
   ]
 }
