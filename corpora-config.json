@@ -1,0 +1,82 @@
+{
+  "corpora": [
+    { "name": "Accessibility",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/accessibility/search-index.json",
+      "remote" : true,
+      "key" : "accessibility"
+    },
+    { "name": "Micropurchase API",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/micropurchase-api-docs/search-index.json",
+      "remote" : true,
+      "key" : "micropurchase-api"
+    },
+    { "name": "Plain Language Tutorial",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/plain-language-tutorial/search-index.json",
+      "remote" : true,
+      "key" : "plain-language-tutorial"
+    },
+    { "name": "Writing Lab Guide",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/writing-lab-guide/search-index.json",
+      "remote" : true,
+      "key" : "writing-lab-guide"
+    },
+    { "name": "Intake",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/intake/search-index.json",
+      "remote" : true,
+      "key" : "intake"
+    },
+    { "name": "Unit Testing Node",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/unit-testing-node/search-index.json",
+      "remote" : true,
+      "key" : "unit-testing-node"
+    },
+    { "name": "Content Guide",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/content-guide/search-index.json",
+      "remote" : true,
+      "key" : "content-guide"
+    },
+    { "name": "Before You Ship",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/before-you-ship/search-index.json",
+      "remote" : true,
+      "key" : "before-you-ship"
+    },
+    { "name": "Front End",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/frontend/search-index.json",
+      "remote" : true,
+      "key" : "frontend"
+    },
+    { "name": "18F Plain Language Tutorial",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/18F-plain-language-tutorial/search-index.json",
+      "remote" : true,
+      "key" : "18F-plain-language-tutorial"
+    },
+    { "name": "Product Guide",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/product-guide/search-index.json",
+      "remote" : true,
+      "key" : "product-guide"
+    },
+    { "name": "Guides Template",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/guides-template/search-index.json",
+      "remote" : true,
+      "key" : "guides-template"
+    },
+    { "name": "Team Browser",
+      "baseurl": "https://pages.18f.gov",
+      "indexPath": "/team-browser/search-index.json",
+      "remote" : true,
+      "key" : "team-browser"
+    }    
+  ]
+}
