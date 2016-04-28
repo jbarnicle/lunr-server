@@ -7,8 +7,18 @@ drastically. Don't use it yet.**
 
 ## Running locally
 
-Assumes that the indexed projects are locally accessible
-via the filepaths listed in `lunr-server-config.json`.
+This is a refactor of the existing 18f/lunr-server it is forking from.  I've left the original
+files in place for comparison purposes. T
+
+
+### Todos:
+
+- make listen port configurable
+- unit tests
+- more robust logging / error handling
+- figure out how to accommodate running both local and on cloud
+- add refresh mechanism to
+
 
 ### Install
 
@@ -16,8 +26,8 @@ via the filepaths listed in `lunr-server-config.json`.
 
 ### Run
 
-    bin/lunr-server lunr-server-config.json
+    node server
 
 ### Query
 
-    curl localhost:8080/?q=my+search+terms
+    curl localhost:5000/?q=my+search+terms

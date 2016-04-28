@@ -16,5 +16,4 @@ config['corpora'].forEach(function(corpusSpec) {
 
 });
 
-console.log(LunrServer);
 LunrServer.run();

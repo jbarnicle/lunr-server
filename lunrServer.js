@@ -14,7 +14,6 @@ function LunrServer(corpora) {
   var server = this;
 
   this.httpServer = new http.Server(function(req, res) {
-        console.log('about to handle request');
         handleRequest(server, req, res);
   });
 	
@@ -33,7 +32,6 @@ LunrServer.prototype.run = function () {
 }
 
 function handleRequest(server, req, res) {
-  console.log('handle request' + req.url);
 	var queryParams, results = { results: [] },	response;
 
     if (req.method !== 'GET') {
@@ -64,7 +62,6 @@ function handleRequest(server, req, res) {
   		}
 	});
 	response = JSON.stringify(results);
-	console.log('q:', queryParams);
 	res.end(response);
 }
 

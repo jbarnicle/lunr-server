@@ -24,16 +24,15 @@ Corpora.prototype.load = function() {
 				console.log(err); // Error: "It broke"
 			});
 	    } else {
-	    	console.log('error');
+	    	console.log(error);
 	    }
 	});3
 }
 
 function parseCorpus(corpus, searchJSON) {
 	return new Promise(function(resolve, reject) {
-		var rawJson;
 		try {
-			rawJson = JSON.parse(searchJSON);
+			var rawJson = JSON.parse(searchJSON);
 			rawJson.index = lunr.Index.load(rawJson.index);
 			Object.keys(rawJson).forEach(function(key) {
 				corpus[key] = rawJson[key];
