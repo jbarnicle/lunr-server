@@ -8,7 +8,7 @@ drastically. Don't use it yet.**
 ## Running locally
 
 This is a refactor of the existing 18f/lunr-server it is forking from.  I've left the original
-files in place for comparison purposes. T
+files in place for comparison purposes. 
 
 
 ### Todos:
@@ -17,7 +17,9 @@ files in place for comparison purposes. T
 - unit tests
 - more robust logging / error handling
 - figure out how to accommodate running both local and on cloud
-- add refresh mechanism to
+- add refresh mechanism to corpora
+- js linting
+- start / stop / reload functionality
 
 
 ### Install
