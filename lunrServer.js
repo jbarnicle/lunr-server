@@ -2,7 +2,6 @@
 
 var http = require('http');
 var lunr = require('lunr');
-var packageInfo = require('./package.json');
 var querystring = require('querystring');
 var url = require('url');
 // var cfenv = require("cfenv");
@@ -10,7 +9,7 @@ var url = require('url');
 
 function LunrServer(corpora) {
 
-	this.corpora = corpora;
+  this.corpora = corpora;
   var server = this;
 
   this.httpServer = new http.Server(function(req, res) {
