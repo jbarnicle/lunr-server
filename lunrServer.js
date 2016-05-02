@@ -4,30 +4,26 @@ var http = require('http');
 var lunr = require('lunr');
 var querystring = require('querystring');
 var url = require('url');
-// var cfenv = require("cfenv");
-// var appEnv = cfenv.getAppEnv();
 
-function LunrServer(corpora) {
-
-  this.corpora = corpora;
-  var server = this;
-
-  this.httpServer = new http.Server(function(req, res) {
-        handleRequest(server, req, res);
-  });
-	
-}
-
-LunrServer.prototype.addCorpus = function (corpus) {
+module.exports = class LunrServer {
+  
+  constructor() {
     
+    this.corpora = {};
+    var server = this;
+    this.httpServer = new http.Server(function(req, res) {
+        handleRequest(server, req, res);
+      });
+  }
+
+  addCorpus(corpus) {
     this.corpora[corpus.name] = corpus;
+  }
 
-}
+  run(port) {
+    this.httpServer.listen(port);
+  }
 
-LunrServer.prototype.run = function () {
-
-//    this.httpServer.listen(appEnv.port);
-    this.httpServer.listen(5000);
 }
 
 function handleRequest(server, req, res) {
@@ -63,5 +59,3 @@ function handleRequest(server, req, res) {
 	response = JSON.stringify(results);
 	res.end(response);
 }
-
-module.exports = LunrServer;
